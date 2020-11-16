@@ -18,7 +18,7 @@ class BankAccount
   end
 
   def self.valid?
-    if @balance < 0 && status == "open"
+    if @balance > 0 && status == "open"
       true
     else
       false

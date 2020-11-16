@@ -25,7 +25,12 @@ class Transfer
       return "Transaction rejected. Please check your account balance."
     end
   end
-  binding.pry
+
+  def reverse_transfer
+    if @status == "complete"
+      @sender.balance += @amount
+      @receiver.balance -= @amount
+      @status = "pending"
 
 
 end

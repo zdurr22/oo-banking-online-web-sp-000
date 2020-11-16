@@ -12,6 +12,18 @@ class BankAccount
     @balance = @balance + amount
   end
 
+  def display_balance
+    @balance
+  end
+
+  def self.valid?
+    if @balance < 0 && status != "closed"
+      true
+    else
+      false
+    end
+  end
+
 
 
 end
